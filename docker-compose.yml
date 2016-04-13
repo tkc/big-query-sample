@@ -1,0 +1,10 @@
+web0:
+  image: tkcdocker/php56nginx
+  container_name: web-big-query
+  ports:
+    - "8001:80"
+  volumes:
+    - ./Code/web0:/var/www
+    - ./logs/web0/nginx:/var/log/nginx
+    - ./settings/web0/nginx:/etc/nginx/sites-available
+  privileged: true
